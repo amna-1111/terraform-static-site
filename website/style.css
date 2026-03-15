@@ -1,6 +1,17 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  background: #2a7b9b;
+  background: linear-gradient(
+    90deg,
+    rgba(42, 123, 155, 1) 0%,
+    rgba(87, 199, 133, 1) 50%,
+    rgba(237, 221, 83, 1) 100%
+  );
   text-align: center;
   padding-top: 50px;
+}
+
+h1,
+p {
+  color: white;
 }
