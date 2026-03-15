@@ -33,5 +33,9 @@ jobs:
       - name: Terraform Plan
         run: terraform plan -var="bucket_name=${{ secrets.BUCKET_NAME }}"
 
+      - name: Terraform Import Bucket
+        run: terraform import -var="bucket_name=${{ secrets.BUCKET_NAME }}" aws_s3_bucket.website ${{ secrets.BUCKET_NAME }}
+        continue-on-error: true
+
       - name: Terraform Apply
         run: terraform apply -auto-approve -var="bucket_name=${{ secrets.BUCKET_NAME }}"
